@@ -13,8 +13,8 @@ input('Please press enter to continue...')
 print()
 RESOLUTION = int(input("Please enter your resolution: "))
 
-
-values = [0.075, 0.125]
+values = [0.036, 0.060]
+values1 = [0.092, 0.144]
 
 scales = [
 	values[0]/(RESOLUTION/16),
@@ -22,16 +22,22 @@ scales = [
 	values[0]/(RESOLUTION/16)
 ]
 
+scales1 = [
+	values1[0]/(RESOLUTION/16),
+	values1[1]/(RESOLUTION/16),
+	values1[0]/(RESOLUTION/16)
+]
+
 
 data = {
 	'minecraft:render_offsets': {
 		'main_hand': {
 			'first_person': {'scale': scales},
-			'third_person': {'scale': scales}
+			'third_person': {'scale': scales1}
 		},
 		'off_hand': {
 			'first_person': {'scale': scales},
-			'third_person': {'scale': scales}
+			'third_person': {'scale': scales1}
 		}
 	}
 }
